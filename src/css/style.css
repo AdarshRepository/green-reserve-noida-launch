@@ -13,16 +13,16 @@
 body{margin: 0;padding: 0;}
 header{position: relative;}
 .headers{width: 100%;background: rgb(1 49 12 / 45%);padding: 10px 10px;position: fixed;z-index: 1000;-webkit-transition: all ease-out .5s;-moz-transition: all ease-out .5s;-o-transition: all ease-out .5s;transition: all ease-out .5s;}
-.logo-box{width: 200px;float: left;}
+.logo-box{width: 150px;float: left;}
 .logo-box a{}
 .logo-box a img{width: 100%;}
 .headeractive{background: var(--site-color);}
-.navs{float: right;display: flex;padding-top: 20px;}
+.navs{float: right;display: flex;padding-top: 15px;}
 .navs ul{margin-bottom: 0;}
 .navs ul li{display: inline-block;padding: 1px 10px;}
 .navs ul li a{font-family: var(--primary-font);color: var(--title-color);font-size: 18px;text-decoration: none;text-transform: capitalize;}
 .navs ul li a:hover{color: var(--white-color);}
-.callnowbtn{padding: 1px 10px;font-family: var(--primary-font);color: var(--title-color);font-size: 18px;text-decoration: none;text-transform: capitalize;}
+.callnowbtn{padding: 1px 0px 0px 25px;font-family: var(--primary-font);color: var(--title-color);font-size: 18px;text-decoration: none;text-transform: capitalize;}
 .callnowbtn:hover{color: var(--white-color);}
 .header-navigaton-menu{float: right;width: 50%;display: none;}
 .sidenav {height: 100%;width: 0;position: fixed;z-index: 1;top: 0;right: 0;background-color: var(--site-color);overflow-x: hidden;transition: 0.5s;padding-top: 60px;}
@@ -31,9 +31,9 @@ header{position: relative;}
 .navtoggles img{width: 35px;}
 .sidenav .closebtn{text-decoration: none;position: absolute;top: 10px;right: 25px;font-size: 35px;margin-left: 50px;display: block;color: var(--title-color);}
 .sidenav .closebtn img{width: 30px;}
-.sidenav ul{padding: 0 20px;}
+.sidenav ul{padding: 10px 20px;}
 .sidenav ul li{width: 100%;list-style: none;}
-.sidenav ul li a{font-family: var(--primary-font);text-decoration: none;width: 100%;display: block;color: var(--white-color);font-size: 16px;margin-bottom: 10px;text-transform: c;}
+.sidenav ul li a{font-family: var(--primary-font);text-decoration: none;width: 100%;display: block;color: var(--white-color);font-size: 16px;margin-bottom: 10px;text-transform: capitalize;}
 .overviewbox{margin-bottom: 20px;}
 .overviewbox img{width: 100%;}
 .overviewbox h1{font-family: var(--primary-font);color: var(--title-color);position: relative;margin-bottom: 20px;}
@@ -58,7 +58,6 @@ header video, .bannersection iframe{width: 100%;height: 100%;position: relative;
 @-webkit-keyframes wheel {
 	to {opacity: 0;top: 40px;}
 }
-
 #owl-demo .item{text-align: center;}
 .customNavigation{width:100%; margin:0 auto; text-align:center; cursor:pointer;}
 .customNavigation a{position: absolute;padding: 0;top: 50%;color: var(--title-color);font-size: 50px;}
@@ -74,7 +73,7 @@ header video, .bannersection iframe{width: 100%;height: 100%;position: relative;
 .table>:not(:last-child)>:last-child>*{border-bottom-color:var(--site-color) !important;}
 .table thead{border: 1px solid var(--site-color);background: var(--site-color);}
 .table thead tr{}
-.table thead tr th{font-family: var(--primary-font);color: var(--title-color);text-align: center;}
+.table thead tr th{font-family: var(--primary-font);color: var(--title-color);text-align: center;font-size: 18px;}
 .table tbody{border: 1px solid var(--border-color);}
 .table tbody tr{}
 .table tbody tr td{font-family: var(--secondary-font);color: var(--text-color);text-align: center;}
@@ -93,6 +92,19 @@ header video, .bannersection iframe{width: 100%;height: 100%;position: relative;
 .locationmapbox img{width: 100%;margin-bottom: 10px;}
 .locationmapbox p{text-align: center;font-size: 18px;color: var(--text-color);}
 .locationmapbox p i{color: var(--title-color);vertical-align: middle;}
+.modal-content{border-radius: 0px !important;}
+.modal-form h2{font-family: var(--primary-font);color: var(--title-color);background: var(--site-color);text-align: center;font-size: 25px;padding: 10px 10px;margin-bottom: 0;}
+.modal-form h2 span{float: right;}
+.popupclose{outline: none;background: none;border: none;color: var(--title-color);font-size: 40px;margin-top: -9px;}
+.popupforms{padding: 20px 20px;}
+.popupforms form{border: 1px solid var(--title-color);padding: 20px 20px;}
+.formfield{width: 100%;font-family: var(--secondary-font);margin-bottom: 15px;}
+.formfield input{width: 100%;outline: none;padding: 8px 8px 8px 8px;border: 1px solid var(--border-color);font-size: 15px;}
+.formfield select{display: inline-block;outline: none;padding: 9px 1px 10px 6px;border: 1px solid var(--border-color);font-size: 15px;}
+.halfinput {width: calc(100% - 88px) !important;}
+.formfield button{background: var(--title-color);color: var(--white-color);padding: 6px 10px;outline: none;font-size: 15px;border: 1px solid var(--title-color);text-transform: uppercase;width: 100%;}
+.formfield button:hover{background: var(--white-color);color: var(--title-color);}
+
 @media only screen and (max-width: 1024px){
 	.bannersection iframe{height: 580px;}
 }
@@ -106,6 +118,7 @@ header video, .bannersection iframe{width: 100%;height: 100%;position: relative;
 	.logo-box{width: 140px;}
 	.desktop-nav{display: none;}
 	.header-navigaton-menu{display: block;}
+	.navs{padding-top: 20px;}
 	.callnowbtn{font-size: 23px;margin: -12px 35px 0px 0px;}
 }
 @media only screen and (max-width: 767px){
@@ -114,6 +127,8 @@ header video, .bannersection iframe{width: 100%;height: 100%;position: relative;
 	.textdescp{font-size: 16px;}
 	.bannersection iframe{height: 430px;}
 	.customNavigation{display: none;}
+	.upsbox h4 img{width: 40px;margin-right: 5px;}
+	.upsbox h4{font-size: 18px;}
 }
 
 @media only screen and (max-width: 480px){
