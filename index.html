@@ -556,15 +556,15 @@
 				<div class="modal-form">
 					<h2>Enquire Now <span><button type="button" class="popupclose" data-bs-dismiss="modal" aria-label="Close"><i class="bi bi-x"></i></button></span></h2>
 					<div class="popupforms">
-						<form action="https://sheetdb.io/api/v1/27vo4mv9x9nkd" method="POST" id="sheetdb-form">
+						<form name="myForm" action="https://sheetdb.io/api/v1/27vo4mv9x9nkd" method="POST" id="sheetdb-form" onsubmit="return validateForm()">
 							<div class="formfield">
-								<input type="text" name="data[name]" placeholder="Name" required>
+								<input id="fname" type="text" name="data[name]" placeholder="Name" required="required" />
 							</div>
 							<div class="formfield">
-								<input type="email" name="data[email]" placeholder="Email Id" required>
+								<input id="femail" type="email" name="data[email]" placeholder="Email Id" required="required" />
 							</div>
 							<div class="formfield">
-								<select id="countrycode" name="data[countrycode]" title="Country Code" class="sel-cc" required>
+								<select id="countrycode" name="data[countrycode]" title="Country Code" class="sel-cc" required="required">
 									<option value="91" selected="selected">91</option>
                       <option value="1">1</option>
                       <option value="1242">1242</option>
@@ -799,13 +799,13 @@
                       <option value="996">996</option>
                       <option value="998">998</option>
 								</select>
-								<input type="tel" name="data[mobile]" maxlength="15" size="20" placeholder="Mobile" class="halfinput" required>
+								<input id="fmobile" type="tel" name="data[mobile]" maxlength="15" size="20" placeholder="Mobile" class="halfinput" required="required" />
 							</div>
 							<div class="formfield">
 								<button type="submit" class="g-recaptcha" 
         data-sitekey="6LdlcF0lAAAAAGpskdQGZfYBBTsYmO6nE4UTdDkU" 
         data-callback='onSubmit' 
-        data-action='submit'>Submit</button>
+      >Submit</button>
 							</div>
 						</form>
 					</div>
@@ -813,7 +813,20 @@
 			</div>
 		</div>
 	</div>
-	
+
+	<script>
+function validateForm() {
+  let a = document.forms["myForm"]["data[name]"].value;
+  let b = document.forms["myForm"]["data[email]"].value;
+  let c = document.forms["myForm"]["data[mobile]"].value;
+  if (a == "" || b == "" || c == ""){
+    alert("Name must be filled out");
+    return false;
+  }
+}
+</script>
+
+
     <script>
   var form = document.getElementById('sheetdb-form');
   form.addEventListener("submit", e => {
