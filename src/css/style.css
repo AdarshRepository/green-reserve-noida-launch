@@ -104,7 +104,17 @@ header video, .bannersection iframe{width: 100%;height: 100%;position: relative;
 .halfinput {width: calc(100% - 88px) !important;}
 .formfield button{background: var(--title-color);color: var(--white-color);padding: 6px 10px;outline: none;font-size: 15px;border: 1px solid var(--title-color);text-transform: uppercase;width: 100%;}
 .formfield button:hover{background: var(--white-color);color: var(--title-color);}
-
+.side-sticky-widgets{position: fixed;bottom: 50%;right: 15px;cursor: pointer;z-index: 99999999;display: grid;text-transform: capitalize;text-align: center;font-family: var(--primary-font);background: var(--site-color);padding: 10px;border: 1px solid var(--title-color);}
+.side-sticky-widgets a{text-decoration: none;color: var(--title-color);border-bottom: 1px solid var(--title-color);padding: 4px 3px 0px 3px}
+.side-sticky-widgets button:hover, .side-sticky-widgets a:hover{text-decoration: none;color: var(--white-color);}
+.side-sticky-widgets a i{display: block;font-size: 25px;}
+.side-sticky-widgets button{outline: none;background: none;border: none;color: var(--title-color);padding: 4px 3px 0px 3px}
+.side-sticky-widgets button i{display: block;font-size: 25px;}
+.side-sticky-widgets a span, .side-sticky-widgets button span{display: none;}
+#scroll{position:fixed;right:15px;bottom:65px;cursor:pointer;width:40px;height:40px;background-color:var(--title-color); display:none;border: 1px solid var(--title-color);}
+#scroll span{position: relative;text-align: center;}
+#scroll span i{position:absolute;top:50%;left:50%;margin-top:-12px;height:0;width:0;color:#fff;font-size:40px}
+#scroll:hover{background-color: var(--site-color);opacity:1;filter:"alpha(opacity=100)";-ms-filter:"alpha(opacity=100)"}
 @media only screen and (max-width: 1024px){
 	.bannersection iframe{height: 580px;}
 }
@@ -120,6 +130,13 @@ header video, .bannersection iframe{width: 100%;height: 100%;position: relative;
 	.header-navigaton-menu{display: block;}
 	.navs{padding-top: 20px;}
 	.callnowbtn{font-size: 23px;margin: -12px 35px 0px 0px;}
+}
+@media only screen and (max-width: 800px){
+	.side-sticky-widgets{bottom: 0;left: 0;right: 0;display: inline-flex;}
+	.side-sticky-widgets a, .side-sticky-widgets button{width: 50%;float: left;vertical-align: middle;}
+	.side-sticky-widgets a{border-bottom: 0;border-right: 1px solid var(--title-color);}
+	.side-sticky-widgets a span, .side-sticky-widgets button span{display: inline-block;margin-left: 5px;}
+	.side-sticky-widgets a i, .side-sticky-widgets button i{display: inline;vertical-align: inherit;font-size: 20px;}
 }
 @media only screen and (max-width: 767px){
 	.about-box h5{font-size: 20px;}
