@@ -5,3 +5,11 @@
 	font-display: swap;
 	src: url("../../fonts/Kano.otf");
 }
+
+@font-face {
+	font-family: "Allenia";
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+	src: url("../../fonts/Allenia-Regular.ttf");
+}
